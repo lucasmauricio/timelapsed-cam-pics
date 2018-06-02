@@ -9,8 +9,8 @@ By the way, I suggest to use [VirtualEnv](https://virtualenv.pypa.io/) for runni
 
 ## TODOs
 
-[ ] Write some PEP documentation
-[ ] Add metadata into the pictures
-[ ] Allow to configure the time between the photos (now it's 30 seconds)
-[ ] Allow to configure the time the application must run (now it's for one hour)
-[ ] Create installation configuration (write a setup.py to be used with PyPI)
+- [ ] Write some PEP documentation
+- [ ] Add metadata into the pictures
+- [ ] Allow to configure the time between the photos (now it's 30 seconds)
+- [ ] Allow to configure the time the application must run (now it's for one hour)
+- [ ] Create installation configuration (write a setup.py to be used with PyPI)
