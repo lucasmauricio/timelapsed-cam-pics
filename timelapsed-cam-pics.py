@@ -6,7 +6,7 @@ import datetime
 # https://stackoverflow.com/questions/22116071/creating-time-lapse-images-in-python
 def capture_image():
     image_time = time.time()
-    cap = cv2.VideoCapture(1) #1 is my secondary web cam
+    cap = cv2.VideoCapture(0) #0 is my primary web cam
     image0 = cap.read()[1]
     time_str = datetime.datetime.fromtimestamp(image_time).strftime('%Y-%m-%d %H:%M:%S')
     write_text(image0, time_str)
