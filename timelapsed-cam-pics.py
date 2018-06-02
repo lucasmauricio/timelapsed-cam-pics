@@ -2,8 +2,6 @@ import cv2
 import time
 import datetime
 
-# import pyexifinfo as p
-
 
 # https://stackoverflow.com/questions/22116071/creating-time-lapse-images-in-python
 def capture_image():
@@ -21,9 +19,6 @@ def capture_image():
     params.append(8)
 
     cv2.imwrite(f"images/image-{time_str}.png", image0, params)
-
-    # bb = p.get_json(f"images/image-{aa}.png")
-    # print(bb)
 
 # https://stackoverflow.com/questions/16615662/how-to-write-text-on-a-image-in-windows-using-python-opencv2
 def write_text(image, text):
