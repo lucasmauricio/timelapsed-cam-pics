@@ -6,12 +6,12 @@ import datetime
 # https://stackoverflow.com/questions/22116071/creating-time-lapse-images-in-python
 def capture_image():
     image_time = time.time()
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(1) #1 is my secondary web cam
     image0 = cap.read()[1]
     time_str = datetime.datetime.fromtimestamp(image_time).strftime('%Y-%m-%d %H:%M:%S')
     write_text(image0, time_str)
 
-    # compressão
+    # compression
     # https://stackoverflow.com/questions/12216333/opencv-imread-imwrite-increases-the-size-of-png
     # https://stackoverflow.com/questions/40027678/how-to-compress-png-file-with-opencv-in-python
     params = list()
@@ -39,8 +39,8 @@ def write_text(image, text):
     )
 
 if __name__ == "__main__":
-    endTime = time.time() + 0.5*60*60 # 1 hour from now
+    endTime = time.time() + 1*60*60 # 1 hour from now
     while time.time() < endTime:
         photo_at = capture_image()
         print(f"Photo taken at {photo_at}")
-        time.sleep(30)
+        time.sleep(30) # wait 30 seconds
